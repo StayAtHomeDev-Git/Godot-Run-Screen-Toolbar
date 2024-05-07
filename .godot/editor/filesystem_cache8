@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1715118859
+icon.svg::CompressedTexture2D::7195730655799861710::1715046953::1715046959::1::::<><>::
+test_scene.tscn::PackedScene::8413967646748650982::1715118854::0::1::::<><>::
+::res://addons/::1715047242
+::res://addons/run_screen_toolbar/::1715118854
+menu.gd::GDScript::-1::1715111516::0::1::::<>Control<>::
+plugin.cfg::TextFile::-1::1715047242::0::1::::<><>::
+screen_button_group.tres::ButtonGroup::3397218970898124261::1715109153::0::1::::<><>::
+screen_toolbar.gd::GDScript::-1::1715049711::0::1::::<>EditorPlugin<>::
+screen_toolbar.tscn::PackedScene::8796253925518435491::1715118854::0::1::::<><>::res://addons/run_screen_toolbar/menu.gd<>uid://u5exhbw0kjn::::res://addons/run_screen_toolbar/images/screen1.png<>uid://bonvx2lfisf0p::::res://addons/run_screen_toolbar/screen_button_group.tres<>uid://c3ejs4h6fc5kt::::res://addons/run_screen_toolbar/images/screen2.png<>uid://df4gotxgp7eih::::res://addons/run_screen_toolbar/images/screen3.png<>uid://qbhlcmw58y1v::::res://addons/run_screen_toolbar/images/fullscreen.png
+::res://addons/run_screen_toolbar/images/::1715107066
+fullscreen.png::CompressedTexture2D::1125530663270245393::1715107050::1715107050::1::::<><>::
+screen1.png::CompressedTexture2D::43117426966322543::1715107053::1715107066::1::::<><>::
+screen2.png::CompressedTexture2D::6746966632898612831::1715107055::1715107056::1::::<><>::
+screen3.png::CompressedTexture2D::7570463560976540439::1715107058::1715107058::1::::<><>::

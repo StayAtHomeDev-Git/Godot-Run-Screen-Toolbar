@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxk8atwly7xol"]
+
+[ext_resource type="Script" path="res://addons/run_screen_toolbar/menu.gd" id="1_31scw"]
+[ext_resource type="Texture2D" uid="uid://u5exhbw0kjn" path="res://addons/run_screen_toolbar/images/screen1.png" id="2_3dlhx"]
+[ext_resource type="ButtonGroup" uid="uid://bonvx2lfisf0p" path="res://addons/run_screen_toolbar/screen_button_group.tres" id="2_sqte7"]
+[ext_resource type="Texture2D" uid="uid://c3ejs4h6fc5kt" path="res://addons/run_screen_toolbar/images/screen2.png" id="3_7kaqg"]
+[ext_resource type="Texture2D" uid="uid://df4gotxgp7eih" path="res://addons/run_screen_toolbar/images/screen3.png" id="4_r67h8"]
+[ext_resource type="Texture2D" uid="uid://qbhlcmw58y1v" path="res://addons/run_screen_toolbar/images/fullscreen.png" id="5_py07q"]
+
+[node name="ScreenToolbar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_31scw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -410.0
+offset_top = 5.0
+offset_right = -304.0
+offset_bottom = 25.0
+
+[node name="Screen1" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_sqte7")
+texture_normal = ExtResource("2_3dlhx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Screen2" type="TextureButton" parent="HBoxContainer"]
+modulate = Color(0.466667, 0.466667, 0.466667, 1)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_sqte7")
+texture_normal = ExtResource("3_7kaqg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Screen3" type="TextureButton" parent="HBoxContainer"]
+modulate = Color(0.466667, 0.466667, 0.466667, 1)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_sqte7")
+texture_normal = ExtResource("4_r67h8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullscreen" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+tooltip_text = "Enable Fullscreen"
+toggle_mode = true
+texture_normal = ExtResource("5_py07q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="mouse_entered" from="HBoxContainer/Screen1" to="." method="on_button_hover" binds= ["Screen1"]]
+[connection signal="mouse_exited" from="HBoxContainer/Screen1" to="." method="on_button_unhover" binds= ["Screen1"]]
+[connection signal="pressed" from="HBoxContainer/Screen1" to="." method="update_run_screen" binds= [0, "Screen1"]]
+[connection signal="toggled" from="HBoxContainer/Screen1" to="." method="update_button_color" binds= ["Screen1"]]
+[connection signal="mouse_entered" from="HBoxContainer/Screen2" to="." method="on_button_hover" binds= ["Screen2"]]
+[connection signal="mouse_exited" from="HBoxContainer/Screen2" to="." method="on_button_unhover" binds= ["Screen2"]]
+[connection signal="pressed" from="HBoxContainer/Screen2" to="." method="update_run_screen" binds= [1, "Screen2"]]
+[connection signal="toggled" from="HBoxContainer/Screen2" to="." method="update_button_color" binds= ["Screen2"]]
+[connection signal="mouse_entered" from="HBoxContainer/Screen3" to="." method="on_button_hover" binds= ["Screen3"]]
+[connection signal="mouse_exited" from="HBoxContainer/Screen3" to="." method="on_button_unhover" binds= ["Screen3"]]
+[connection signal="pressed" from="HBoxContainer/Screen3" to="." method="update_run_screen" binds= [2, "Screen3"]]
+[connection signal="toggled" from="HBoxContainer/Screen3" to="." method="update_button_color" binds= ["Screen3"]]
+[connection signal="toggled" from="HBoxContainer/Fullscreen" to="." method="update_run_screen_size" binds= ["Fullscreen"]]
