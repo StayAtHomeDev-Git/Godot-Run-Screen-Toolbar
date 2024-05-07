@@ -15,3 +15,7 @@ I got tired of constantly having to go into the Editor Settings to switch betwee
 - Beautify code
 - Make toolbar aware of number of actual screens (Hard-coded for three currently)
 - Possibly add more settings (resolution, etc)
+
+## Installation
+- Move addons folder into your project folder OR move contents of addons folder into existing addons folder
+- Enable plugin in Project Settings
